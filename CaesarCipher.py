@@ -1,4 +1,7 @@
 #Caesar Cipher
+#Name: Brooks Conway
+#Date: 2/19/25
+#Assignment: Lab 5
 #The Caesar cipher moves each letter forward in the alphabet by
 #the key.  The resulting message has all the letters advanced by 'key'
 #letters.
