@@ -3,6 +3,14 @@
 #the key.  The resulting message has all the letters advanced by 'key'
 #letters.
 #To run the code, run the main() function
+def main():
+    message = input("Enter a message: ")
+    key = int(input("Enter a key: "))
+
+    secret = encode(message, key)
+    print ("Encrypted:", secret)
+    plaintext = decode(secret, key)
+    print ("Decrypted:", plaintext)
 
 def encode(message, key):
     alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -19,20 +27,8 @@ def encode(message, key):
     return secret
 
 def decode(message, key):
-    #We will want to decode the message here.
-    alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    message = message.upper()
-    secret = ""
-    return "NOPE"
-def main():
-    message = input("Enter a message: ")
-    key = int(input("Enter a key: "))
-
-    secret = encode(message, key)
-    print ("Encrypted:", secret)
-    plaintext = decode(secret, key)
-    print ("Decrypted:", plaintext)
-
+    plaintext = encode(message, -key)
+    return plaintext
 
 if __name__ == '__main__':
   main()
